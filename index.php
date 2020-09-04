@@ -8,7 +8,9 @@
 			<h2>Subir Archivo al servidor</h2>
 		</div>
 
-		<?php if (isset($_SESSION['mensaje'])) { ?>
+		<?php 
+		session_start();
+		if (isset($_SESSION['mensaje'])) { ?>
 
 			<div class="alert alert-<?= $_SESSION['tipo_mensaje'] ?> alert-dismissible fade show" role="alert">
 				<?= $_SESSION['mensaje'] ?>
@@ -28,7 +30,7 @@
 			<div class="panel-footer">
 				<br>
 				<!-- <button class="btn btn-primary">Ingresar</button> -->
-				<input type="submit" class="btn btn-primary" name="subir" value="Enviar Archivo">
+				<input type="submit" class="btn btn-primary" name="subir" value="Subir Archivo">
 			</div>
 	</div>
 </form>
